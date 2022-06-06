@@ -1,15 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import QuoteProvider from './quotes.context';
+import { render } from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   // <React.StrictMode>
+//     <App />
+//   // </React.StrictMode>
+// );
+
+
+const rootElement = document.getElementById("root");
+
+render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+      <QuoteProvider>
+        <App/>
+        {/* <SignIn/> */}
+      </QuoteProvider>
+  </React.StrictMode>,
+  rootElement
 );
+
+// ReactDOM.render(
+//   // <React.StrictMode>
+//     <QuoteProvider>
+//     <App />
+//     </QuoteProvider>,
+//   // </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
