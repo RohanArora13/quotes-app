@@ -10,7 +10,7 @@ var currentQuoteLen = 100
 
 const fetch_image = async (name) => {
   var imageLink=''
-  await fetch('http://rihit555.pythonanywhere.com/?input='+name)
+  await fetch('https://rihit555.pythonanywhere.com/?input='+name)
       .then((res) => res.json())
       .then((json) => {
         // console.log('json.link'+json.link)
