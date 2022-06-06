@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "https://RohanArora13.github.io/quotes-app",
   "name": "quotes-app",
   "version": "0.1.0",
   "private": true,
@@ -9,12 +9,15 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^12.5.0",
     "clsx": "^1.1.1",
+    "gh-pages": "^4.0.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
